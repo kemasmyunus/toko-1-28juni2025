@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EBFFD8;
+    color: #333;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #8DBCC7;
+}
+
+a {
+    text-decoration: none;
+    color: #8DBCC7;
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #A4CCD9;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+button, input[type="submit"] {
+    background-color: #8DBCC7;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #A4CCD9;
+}
+
+form input, form select {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #C4E1E6;
+    border-radius: 5px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EBFFD8;
+}
+
+header {
+    background-color: #8DBCC7;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #A4CCD9;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding-top: 70px; /* supaya tidak tertutup header */
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #C4E1E6;
+    transform: translateX(5px);
+}
+
+main {
+    margin-left: 220px;
+    padding: 20px;
+    padding-top: 80px; /* supaya konten tidak ketiban header */
+}
+
+footer {
+    background-color: #8DBCC7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 220px;
+    width: calc(100% - 220px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #A4CCD9;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+a.button {
+    background-color: #C4E1E6;
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+a.button:hover {
+    background-color: #A4CCD9;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    margin-top: 15px;
+    background-color: #8DBCC7;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #A4CCD9;
+}
