@@ -49,3 +49,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </select>
     <input type="submit" value="Update">
 </form>
+<?php include '../includes/footer.php'; ?>

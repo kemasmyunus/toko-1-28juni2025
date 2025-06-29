@@ -37,3 +37,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </select>
     <input type="submit" value="Simpan">
 </form>
+<?php include '../includes/footer.php'; ?>

@@ -6,6 +6,8 @@ $stmt = $pdo->query("SELECT imei_sn.*, inventory_batches.id AS batch_id
 $items = $stmt->fetchAll();
 ?>
 <link rel="stylesheet" href="../css/style.css">
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/sidebar.php'; ?>
 <h1>IMEI & SN</h1>
 <a href="create.php">+ Tambah IMEI / SN</a>
 <table>
@@ -33,3 +35,4 @@ $items = $stmt->fetchAll();
     </tr>
     <?php endforeach; ?>
 </table>
+<?php include '../includes/footer.php'; ?>

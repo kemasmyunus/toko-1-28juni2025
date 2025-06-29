@@ -41,3 +41,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <input type="text" name="id_pembelian">
     <input type="submit" value="Simpan">
 </form>
+<?php include '../includes/footer.php'; ?>

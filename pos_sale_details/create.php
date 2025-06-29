@@ -47,3 +47,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <input type="number" name="total_setelah_potongan" step="0.01" required>
     <input type="submit" value="Simpan">
 </form>
+<?php include '../includes/footer.php'; ?>

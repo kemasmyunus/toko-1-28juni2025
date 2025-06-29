@@ -7,6 +7,8 @@ $stmt = $pdo->query("SELECT stock_balances.*, products.nama_produk, warehouses.n
 $stocks = $stmt->fetchAll();
 ?>
 <link rel="stylesheet" href="../css/style.css">
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/sidebar.php'; ?>
 <h1>Stock Balances</h1>
 <a href="create.php">+ Tambah Stock</a>
 <table>
@@ -30,3 +32,4 @@ $stocks = $stmt->fetchAll();
     </tr>
     <?php endforeach; ?>
 </table>
+<?php include '../includes/footer.php'; ?>

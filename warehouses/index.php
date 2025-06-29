@@ -4,6 +4,8 @@ $stmt = $pdo->query("SELECT * FROM warehouses");
 $warehouses = $stmt->fetchAll();
 ?>
 <link rel="stylesheet" href="../css/style.css">
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/sidebar.php'; ?>
 <h1>Data Gudang</h1>
 <a href="create.php">+ Tambah Gudang</a>
 <table>
@@ -25,3 +27,4 @@ $warehouses = $stmt->fetchAll();
     </tr>
     <?php endforeach; ?>
 </table>
+<?php include '../includes/footer.php'; ?>

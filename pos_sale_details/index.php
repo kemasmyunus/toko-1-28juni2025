@@ -22,6 +22,8 @@ $stmt->execute([$sale_id]);
 $details = $stmt->fetchAll();
 ?>
 <link rel="stylesheet" href="../css/style.css">
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/sidebar.php'; ?>
 <h1>Detail Transaksi #<?= $sale_id ?></h1>
 <a href="create.php?sale_id=<?= $sale_id ?>">+ Tambah Item</a>
 <table>
@@ -54,3 +56,4 @@ $details = $stmt->fetchAll();
     <?php endforeach; ?>
 </table>
 <a href="../pos_sales/index.php">← Kembali ke Transaksi</a>
+<?php include '../includes/footer.php'; ?>

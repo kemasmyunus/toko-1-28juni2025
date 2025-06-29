@@ -6,6 +6,8 @@ $stmt = $pdo->query("SELECT inventory_batches.*, products.nama_produk
 $batches = $stmt->fetchAll();
 ?>
 <link rel="stylesheet" href="../css/style.css">
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/sidebar.php'; ?>
 <h1>Inventory Batches</h1>
 <a href="create.php">+ Tambah Batch</a>
 <table>
@@ -37,3 +39,4 @@ $batches = $stmt->fetchAll();
     </tr>
     <?php endforeach; ?>
 </table>
+<?php include '../includes/footer.php'; ?>

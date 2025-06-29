@@ -4,6 +4,8 @@ $stmt = $pdo->query("SELECT * FROM reconcile");
 $data = $stmt->fetchAll();
 ?>
 <link rel="stylesheet" href="../css/style.css">
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/sidebar.php'; ?>
 <h1>Reconcile</h1>
 <a href="create.php">+ Tambah Data</a>
 <table>
@@ -31,3 +33,4 @@ $data = $stmt->fetchAll();
     </tr>
     <?php endforeach; ?>
 </table>
+<?php include '../includes/footer.php'; ?>

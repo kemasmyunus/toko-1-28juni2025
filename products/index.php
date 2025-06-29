@@ -1,15 +1,11 @@
-
-<?php include '../header.php'; ?>
-<?php include '../sidebar.php'; ?>
-
-<main class="content">
-    <!-- ⬇ Tambahkan konten halaman utama di sini ⬇ -->
 <?php
 require '../db.php';
 $stmt = $pdo->query("SELECT * FROM products");
 $products = $stmt->fetchAll();
 ?>
 <link rel="stylesheet" href="../css/style.css">
+<?php include '../includes/sidebar.php'; ?>
+<?php include '../includes/header.php'; ?>
 <h1>Data Produk</h1>
 <a href="create.php">+ Tambah Produk</a>
 <table>
@@ -39,6 +35,4 @@ $products = $stmt->fetchAll();
     </tr>
     <?php endforeach; ?>
 </table>
-</main>
-
-<?php include '../footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

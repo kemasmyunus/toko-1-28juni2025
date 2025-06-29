@@ -53,3 +53,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <input type="text" name="id_pembelian" value="<?= htmlspecialchars($batch['id_pembelian']) ?>">
     <input type="submit" value="Update">
 </form>
+<?php include '../includes/footer.php'; ?>

@@ -6,6 +6,8 @@ $stmt = $pdo->query("SELECT pos_sales.*, customers.nama AS customer_nama
 $sales = $stmt->fetchAll();
 ?>
 <link rel="stylesheet" href="../css/style.css">
+<?php include '../includes/header.php'; ?>
+<?php include '../includes/sidebar.php'; ?>
 <h1>POS Sales</h1>
 <a href="create.php">+ Tambah Transaksi</a>
 <table>
@@ -34,3 +36,4 @@ $sales = $stmt->fetchAll();
     </tr>
     <?php endforeach; ?>
 </table>
+<?php include '../includes/footer.php'; ?>
