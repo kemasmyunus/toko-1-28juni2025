@@ -3,6 +3,8 @@ body {
     background-color: #EBFFD8;
     color: #333;
     margin: 20px;
+    padding-bottom: 30px; /* Atur sesuai tinggi footernya */
+
 }
 
 h1, h2 {
