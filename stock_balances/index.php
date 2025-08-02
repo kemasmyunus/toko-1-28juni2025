@@ -28,6 +28,7 @@ $stocks = $stmt->fetchAll();
         <td>
             <a href="edit.php?id=<?= $s['id'] ?>">Edit</a>
             <a href="delete.php?id=<?= $s['id'] ?>" onclick="return confirm('Yakin hapus?')">Hapus</a>
+            <a href="history.php?id=<?= $s['id'] ?>">Riwayat</a>
         </td>
     </tr>
     <?php endforeach; ?>

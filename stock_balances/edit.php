@@ -11,6 +11,34 @@ if (!$stock) {
 
 $products = $pdo->query("SELECT * FROM products")->fetchAll();
 $warehouses = $pdo->query("SELECT * FROM warehouses")->fetchAll();
+// Setelah $stock sudah di-fetch dan sebelum update
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $old_quantity = $stock['quantity'];
+    $new_quantity = $_POST['quantity'];
+
+    if ($old_quantity != $new_quantity || $stock['product_id'] != $_POST['product_id'] || $stock['warehouse_id'] != $_POST['warehouse_id']) {
+        // Simpan ke tabel stock_history
+        $log = $pdo->prepare("INSERT INTO stock_history (stock_id, product_id, warehouse_id, old_quantity, new_quantity) VALUES (?, ?, ?, ?, ?)");
+        $log->execute([
+            $id,
+            $_POST['product_id'],
+            $_POST['warehouse_id'],
+            $old_quantity,
+            $new_quantity
+        ]);
+    }
+
+    // Lanjut update stock_balances
+    $stmt = $pdo->prepare("UPDATE stock_balances SET product_id=?, warehouse_id=?, quantity=? WHERE id=?");
+    $stmt->execute([
+        $_POST['product_id'],
+        $_POST['warehouse_id'],
+        $new_quantity,
+        $id
+    ]);
+
+    header("Location: index.php");
+}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt = $pdo->prepare("UPDATE stock_balances SET product_id=?, warehouse_id=?, quantity=? WHERE id=?");
